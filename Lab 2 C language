@@ -1,0 +1,87 @@
+int numDigits1(int num)
+{
+
+    int count = 0;
+    while(num>0)
+    {
+        count += 1;
+        num = num/10;
+
+    }
+    return count;
+}
+
+void numDigits2(int num,int *result)
+{
+    *result = 0;
+    do
+    {
+        (*result)++;
+        num = num/10;
+    }while(num>0);
+
+}
+
+int digitPos1(int num, int digit)
+{
+
+    int dupNum, pos = 0;
+    while(num>0)
+    {
+        dupNum = num%10;
+        pos++;
+        if(digit == dupNum){
+            break;
+        }
+        num = num/10;
+
+
+    }
+    return pos;
+
+}
+
+void digitPos2(int num, int digit, int *result)
+{
+    int dupNum;
+    *result = 0;
+    while(num>0)
+    {
+        dupNum = num%10;
+        (*result)++;
+        if(digit == dupNum){
+            break;
+        }
+        num = num/10;
+    }
+}
+
+int digitPos1(int num, int digit);
+void digitPos2(int num, int digit, int *result);
+
+int square1(int num)
+{
+    int sum = 0;
+    int oddNum = 1;
+    int i;
+    for(i = 0; i<num ; i++)
+    {
+        sum = sum + oddNum;
+        oddNum = oddNum + 2;
+    }
+
+    return sum;
+}
+void square2(int num, int *result)
+{
+    *result = 0;
+    int oddNum = 1;
+    int i;
+    for(i = 0; i<num ; i++)
+    {
+        *result = *result + oddNum;
+        oddNum = oddNum + 2;
+    }
+
+
+}
