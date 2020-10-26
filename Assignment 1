@@ -62,7 +62,8 @@ void initialize(int *size, int ar[])
     for (i = 0; i < total; i++) {
         scanf("%d", &num);
         insert(MAX, size, ar, num);
-        (*size)++;
+        
+        
  }
 }
 void insert(int max, int *size, int ar[], int num)
@@ -72,35 +73,47 @@ void insert(int max, int *size, int ar[], int num)
 
     if(*size < max)
     {
+    
 
-        for(j = max ; j >= 0 ; j--)
+        for(j = *size ; j >= 0 ; j--)
         {
             ar[j+1] = ar[j];
 
         }
         ar[0] = num;
+        (*size)++;
+    
+    
+    
         for(i = 0; i < *size ; i++)
         {
-           min_idx = i;
-           for(m = i+1; m < 0 ; m++);
-
-           {
-               if (ar[m] < ar[min_idx])
+               min_idx = i;
+               for(m = i+1; m < *size  ; m++)
                {
-                     min_idx = m;
-                     temp = ar[min_idx];
-                     ar[min_idx] = ar[i];
-                     ar[i] = temp;
+                   if(ar[m] < ar[min_idx])
+                   {
+                         min_idx = m;
+                         
+                   }
+                   else
+                   {
+                       min_idx = min_idx;
+                   }
+                    
+                   
                }
-               else{
-                   continue;
-               }
-           }
-          
+               temp = ar[min_idx];
+               ar[min_idx] = ar[i];
+               ar[i] = temp;
+            
         }
-
-
     }
+    else
+    {
+        printf("The array is full\n");
+        return;
+    }
+
 }
 void iremove(int *size, int ar[], int num)
 {
