@@ -115,6 +115,7 @@ void insert(int max, int *size, int ar[], int num)
     }
 
 }
+
 void iremove(int *size, int ar[], int num)
 {
     int i;
