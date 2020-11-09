@@ -39,6 +39,8 @@ void insertChar(char *str1, char *str2, char ch)
         }
     }
 }
+
+
 Question 2
 #include <stdio.h>
 #include <string.h>
