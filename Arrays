@@ -70,6 +70,10 @@ void find2Max1D(int ar[], int size, int *max1, int *max2)
 }
 
 
+
+
+
+
 Question 4
 #include <stdio.h>
 
@@ -104,4 +108,3 @@ void specialNumbers1D(int ar[], int num, int *size)
         }
     }
 }
-
