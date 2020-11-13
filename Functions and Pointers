@@ -15,7 +15,6 @@ void printPattern2(int height)
     int i,j;
     for (i = 1; i<=height; i++)
     {
-        
         for(j = i; j > 0; j--)
         {
             if(j % 2 == 0)
@@ -30,4 +29,5 @@ void printPattern2(int height)
         }
         printf("\n");
      }
-} 
+
+}
