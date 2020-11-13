@@ -29,4 +29,5 @@ void printPattern2(int height)
         }
         printf("\n");
     }
+
 }
